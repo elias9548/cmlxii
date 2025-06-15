@@ -1,140 +1,180 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE html><html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>elias9548</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            font-family: 'Inter', Arial, sans-serif;
-            background: url('search11.jpg') no-repeat center center fixed;
-            background-size: cover;
-            overflow: hidden;
-            position: relative;
-        }
-        /* Затемняющий слой */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(10, 15, 20, 0.7);
-            z-index: 0;
-        }
-        .logo {
-            margin-bottom: 40px;
-            animation: glowIn 2s ease-in-out;
-            position: relative;
-            z-index: 1;
-        }
-        .logo span {
-            font-size: 84px;
-            font-weight: 900;
-            letter-spacing: -5px;
-            color: #ffffff;
-            font-style: normal;
-            text-shadow: 
-                0 0 7px rgba(255, 255, 255, 0.75),
-                0 0 14px rgba(255, 255, 255, 0.55),
-                0 0 28px rgba(255, 255, 255, 0.4),
-                0 0 56px rgba(255, 255, 255, 0.3),
-                0 0 84px rgba(255, 255, 255, 0.15),
-                0 0 112px rgba(255, 255, 255, 0.07);
-            transition: transform 0.3s ease, text-shadow 0.3s ease;
-            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.4);
-            filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.35));
-        }
-        .logo span:hover {
-            transform: scale(1.15);
-            text-shadow: 
-                0 0 14px rgba(255, 255, 255, 0.9),
-                0 0 28px rgba(255, 255, 255, 0.7),
-                0 0 56px rgba(255, 255, 255, 0.6),
-                0 0 84px rgba(255, 255, 255, 0.5),
-                0 0 112px rgba(255, 255, 255, 0.35),
-                0 0 140px rgba(255, 255, 255, 0.25);
-        }
-        .search-container {
-            position: relative;
-            width: 100%;
-            max-width: 750px;
-            animation: slideUp 1.2s ease-in-out;
-            z-index: 1;
-        }
-        .search-bar {
-            display: flex;
-            align-items: center;
-            background: rgba(30, 40, 50, 0.9);
-            border: 1px solid rgba(95, 107, 123, 0.4);
-            border-radius: 50px;
-            padding: 14px 22px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); /* Убрал внутреннее свечение */
-            backdrop-filter: blur(6px);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-        }
-        .search-bar:hover {
-            transform: scale(1.03);
-            border-color: rgba(95, 107, 123, 0.6);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8); /* Убрал внутреннее свечение при наведении */
-        }
-        .search-bar input {
-            flex: 1;
-            border: none;
-            font-size: 20px;
-            outline: none;
-            padding: 10px;
-            background: transparent;
-            color: #e0e7ff;
-            font-weight: 500;
-        }
-        .search-bar input::placeholder {
-            color: transparent;
-        }
-        .search-icon {
-            width: 24px;
-            height: 24px;
-            margin-right: 15px;
-            opacity: 0.8;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-        .search-bar:hover .search-icon {
-            opacity: 1;
-            transform: scale(1.1);
-        }
-        .search-icon svg {
-            stroke: #5f6b7b;
-        }
-        /* Анимации */
-        @keyframes glowIn {
-            from { opacity: 0; text-shadow: 0 0 0 rgba(255, 255, 255, 0); }
-            to { opacity: 1; text-shadow: 0 0 7px rgba(255, 255, 255, 0.75); }
-        }
-        @keyframes slideUp {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GTA CMLXII</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cmlxii {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 64px;
+  font-family: 'Anton', sans-serif;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.gta {
+  font-family: 'Anton', sans-serif;
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 0.9;
+}
+
+.gta div {
+  margin: 2px 0;
+}
+
+.telegram-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.telegram-icon img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.news {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.news::-webkit-scrollbar {
+  display: none;
+}
+
+.news-item {
+  flex: 0 0 auto;
+  background-color: #222;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 400px;
+  aspect-ratio: 4 / 3;
+}
+
+.news-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  background-color: white;
+}
+
+.news-caption {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+h2 {
+  text-align: center;
+  margin: 30px 0 10px;
+  font-size: 24px;
+}
+
+.actors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.actor {
+  background-color: #222;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+}
+
+.actor img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.name, .role {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+  </style>
 </head>
-<body>
-    <div class="logo">
-        <span class="e">e</span><span class="l">l</span><span class="i">i</span><span class="a">a</span><span class="s">s</span><span class="nine">9</span><span class="five">5</span><span class="four">4</span><span class="eight">8</span>
+<body>  <header>
+    <div class="logo-container">
+      <div class="cmlxii">CMLXII</div>
+      <div class="gta">
+        <div>GRAND</div>
+        <div>THEFT</div>
+        <div>AUTO</div>
+      </div>
     </div>
-    <div class="search-container">
-        <form class="search-bar" action="https://yandex.com/search/" method="GET">
-            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-            <input type="text" name="text" required>
-        </form>
+    <div class="telegram-icon">
+      <a href="https://t.me/CMLXII" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+      </a>
     </div>
-</body>
+  </header>  <div class="news">
+    <div class="news-item">
+      <img src="https://www.salanga.ru/up/gallery/priroda_leto_027.jpg" alt="News 1">
+      <div class="news-caption">coming soon</div>
+    </div>
+    <div class="news-item">
+      <img src="https://www.salanga.ru/up/gallery/priroda_leto_027.jpg" alt="News 2">
+      <div class="news-caption">coming soon</div>
+    </div>
+    <div class="news-item">
+      <img src="https://www.salanga.ru/up/gallery/priroda_leto_027.jpg" alt="News 3">
+      <div class="news-caption">coming soon</div>
+    </div>
+  </div>  <h2>ACTORS</h2>
+  <div class="actors">
+    <script>
+      for (let i = 0; i < 11; i++) {
+        document.write(`
+          <div class="actor">
+            <img src="https://static.tildacdn.com/tild6138-6632-4235-b466-613934343134/12.jpg" alt="Actor">
+            <div class="name">coming soon</div>
+            <div class="role">coming soon</div>
+          </div>
+        `);
+      }
+    </script>
+  </div></body>
 </html>
